@@ -1,46 +1,33 @@
+import React, { useState } from "react";
+
 import './App.css';
+import ConsTable from './components/consTable'
+import requestCons from './apiCalls';
+// import getUser from './apiCalls';
 
 function App() {
+  const [rows, setRows] = useState([]);
+
+  const [input, setInput] = useState("");
+
+  const handleChange = (event) => {
+    setInput(event.target.value);
+    console.log(input);
+  }
+
+  const newCons = async (num) => {
+    const new_rows = await requestCons(input); 
+    setRows(new_rows);
+  }
+
   return (
     <div className="App">
       <header className="App-header">
-        <table>
-        <tr>
-            <th>Consonants</th>
-            <th>Labial</th>
-            <th>Alveolar</th>
-            <th>Velar</th>
-        </tr>
-        <tr>
-            <th>Nasal</th>
-            <td>m</td>
-            <td>n</td>
-            <td>ŋ</td>
-        </tr>
-        <tr>
-            <th>Plosive</th>
-            <td>p</td>
-            <td>t</td>
-            <td>k</td>
-        </tr>
-        <tr>
-            <th>Approximant</th>
-            <td>w</td>
-            <td>ɹ</td>
-            <td>j</td>
-        </tr>
-    </table>
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <ConsTable rows={rows} />
+        <form name="Test Form">
+            <label>Enter Number of Consonants Here: <input name="Num Cons" type="text" value={input} onChange={handleChange}/></label>
+            <button type="button" onClick={() => {newCons(input); setInput("")}} >Get Consonants!</button>
+        </form>
       </header>
     </div>
   );
