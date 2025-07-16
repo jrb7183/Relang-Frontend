@@ -15,7 +15,10 @@ const fetchCons = async () => {
       row = row.concat(constable[title])
       rows = rows.concat([row])
     });
-    console.log(rows);
+
+    const order = ["Consonants", "Nasal", "Plosive", "Affricate", "Fricative", "Sibilant", "Tap", "Trill", "Approximant"];
+    rows = rows.sort((manner1, manner2) => {console.log(manner1[0]); return order.indexOf(manner1[0]["text"]) - order.indexOf(manner2[0]["text"])});
+
     return rows
   } catch (error) {
     console.error("Failed fetching consonants", error)
