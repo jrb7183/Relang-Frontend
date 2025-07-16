@@ -5,8 +5,6 @@ function Row(props) {
 }
 
 function ConsTable(props) {
-
-    console.log(props.rows);
     return (
         <>
         <h1>Here is your Consonant Inventory!</h1>

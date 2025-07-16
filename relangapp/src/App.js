@@ -12,7 +12,6 @@ function App() {
 
   const handleChange = (event) => {
     setInput(event.target.value);
-    console.log(input);
   }
 
   const newCons = async (num) => {
@@ -26,7 +25,7 @@ function App() {
         <ConsTable rows={rows} />
         <form name="Test Form">
             <label>Enter Number of Consonants Here: <input name="Num Cons" type="text" value={input} onChange={handleChange}/></label>
-            <button type="button" onClick={() => {newCons(input); setInput("")}} >Get Consonants!</button>
+            <button type="button" onClick={() => {newCons(input)}} >Get Consonants!</button>
         </form>
       </header>
     </div>
