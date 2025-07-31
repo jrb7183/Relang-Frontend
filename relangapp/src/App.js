@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import './App.css';
 import ConsTable from './components/consTable'
 import requestCons from './apiCalls';
+import InputTable from "./components/inputTable";
 // import getUser from './apiCalls';
 
 function App() {
@@ -22,6 +23,7 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
+        <InputTable index={0}/>
         <ConsTable rows={rows} />
         <form name="Test Form">
             <label>Enter Number of Consonants Here: <input name="Num Cons" type="text" value={input} onChange={handleChange}/></label>
