@@ -7,7 +7,7 @@ function Row(props) {
 function ConsTable(props) {
     return (
         <>
-        <h1>Here is your Consonant Inventory!</h1>
+        {props.rows.length > 0 ? <h1>Here is your Consonant Inventory!</h1> : <></>}
         <table className="constable">
             <tbody>
                 {props.rows.map((row, i)=> <Row key={i} cells={row}/>)}

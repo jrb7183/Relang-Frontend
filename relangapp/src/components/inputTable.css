@@ -1,0 +1,16 @@
+.inputTable {
+    border: 1px solid white;
+    border-collapse: collapse;
+    padding: 8px; 
+    width: 50%;
+}
+
+.consCell {
+    border: none;
+    box-sizing: border-box;
+    width: 100%;
+
+    background-color: transparent;
+    color: white;
+    font-size: calc(5px + 1.5vmin);
+}
