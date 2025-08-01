@@ -17,7 +17,7 @@ const fetchCons = async () => {
     });
 
     const order = ["Consonants", "Nasal", "Plosive", "Affricate", "Fricative", "Sibilant", "Tap", "Trill", "Approximant"];
-    rows = rows.sort((manner1, manner2) => {console.log(manner1[0]); return order.indexOf(manner1[0]["text"]) - order.indexOf(manner2[0]["text"])});
+    rows = rows.sort((manner1, manner2) => order.indexOf(manner1[0]["text"]) - order.indexOf(manner2[0]["text"]));
 
     return rows
   } catch (error) {
@@ -25,9 +25,9 @@ const fetchCons = async () => {
   }
 }
 
-const requestCons = async (num) => {
+const requestCons = async (phonologies) => {
   try {
-    await api.post(`/cons?cons_num=${num}`);
+    await api.post('/cons', { phonos: phonologies});
     return fetchCons();
   } catch (error) {
     console.error("Failed request for consonants", error)

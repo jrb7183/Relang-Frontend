@@ -2,14 +2,13 @@ import React, { useState } from "react";
 
 import './App.css';
 import ConsTable from './components/consTable'
-import requestCons from './apiCalls';
+import requestCons from './utils/apiCalls';
+import cleanPhono from "./utils/cleanPhonology";
 import InputTable from "./components/inputTable";
 // import getUser from './apiCalls';
 
 function App() {
   const [outRows, setRows] = useState([]);
-
-  const [consNum, setConsNum] = useState("");
   const [numPhonos, setNumPhonos] = useState(1);
 
   let initInputs = new Array(8).fill(new Array(11).fill(""));
@@ -39,12 +38,10 @@ function App() {
     setInputs(newInputs);
   }
 
-  const handleChange = (event) => {
-    setConsNum(event.target.value);
-  }
-
-  const newCons = async (num) => {
-    const new_rows = await requestCons(consNum); 
+  const newCons = async () => {
+    const phonos = cleanPhono(inputs);
+    console.log(phonos)
+    const new_rows = await requestCons(phonos); 
     setRows(new_rows);
   }
 
@@ -69,10 +66,7 @@ function App() {
         {numPhonos > 1 ? <button type="button" onClick={removePhono} >Remove Phonology</button> : <></>}
         {Array.from({length: numPhonos}).map((_, i) => <InputTable key={i} index={i} inputs={inputs[i]} handleInputs={(event, row, column) => handleInputs(event, i, row, column)} />)}
         <ConsTable rows={outRows} />
-        <form name="Test Form">
-            <label>Enter Number of Consonants Here: <input name="Num Cons" type="text" value={consNum} onChange={handleChange}/></label>
-            <button type="button" onClick={() => {newCons(consNum)}} >Get Consonants!</button>
-        </form>
+        <button type="button" onClick={() => {newCons()}} style={{margin: "10px"}} >Get Consonants!</button>
       </header>
     </div>
   );
