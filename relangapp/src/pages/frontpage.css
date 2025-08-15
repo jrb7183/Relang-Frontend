@@ -1,3 +1,24 @@
+.logoBackground {
+    left: 0.521%;
+    top: 1.296%;
+
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+
+    width: 98.958%;
+    height: 23.148%;
+
+    background-image: linear-gradient(#1E1E1E 74%, #848484);
+    border-radius: 1.316% / 10%;
+}
+
 .frontpage {
+    width: 100vw;
+    height: 100vh;
+    
+    position: relative;
+
     background-color: #071419;
 }
