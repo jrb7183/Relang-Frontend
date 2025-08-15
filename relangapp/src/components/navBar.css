@@ -10,8 +10,15 @@
     color: white;
 
     font-size: calc(5px + 1vmax);
-    font-family: "Inter";
     font-weight: bold;
+}
+
+.navButton:hover {
+    background-color: #185f79;
+}
+
+.navButton:active {
+    background-color: #0c303d;
 }
 
 .featureNav {
