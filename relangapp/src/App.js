@@ -45,13 +45,13 @@ function App() {
     setRows(new_rows);
   }
 
-  const addPhono = (event) => {
+  const addPhono = () => {
     setNumPhonos(numPhonos + 1);
     const newInputs = inputs.concat([new Array(8).fill(new Array(11).fill(""))]);
     setInputs(newInputs);
   }
 
-  const removePhono = (event) => {
+  const removePhono = () => {
     if (numPhonos > 1) {
       setNumPhonos(numPhonos - 1);
       const newInputs = inputs.filter((_, i) => i !== numPhonos - 1);
