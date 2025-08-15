@@ -25,7 +25,7 @@
     display: flex;
     align-items: center;
 
-    padding: inherit;
+    padding: 0 3.333%;
     margin: 0;
 
     width: fit-content;
@@ -40,7 +40,7 @@
     top: 34%;
 
     position: absolute;
-    padding: inherit;
+    padding: 0 3.333%;
     margin: 0;
 
     width: fit-content;
@@ -56,7 +56,7 @@
     top: 1.296%;
 
     position: relative;
-    padding: 0 3.333%;
+    padding: 0 0.895%;
 
     width: 100%;
     height: 100%;
@@ -83,7 +83,7 @@
     grid-template-columns: repeat(3, 31.579%);
 
     gap: 1.737%;
-    padding: 0 0.895%;
+    
     
     width: 100%;
     height: 56.338%;
@@ -100,12 +100,53 @@
     height: 50.141%;
 }
 
+/* About Section */
+.aboutInfo {
+    left: 0;
+    top: 10%;
+
+    position: absolute;
+    padding: 0 1.053%;
+    margin: 0;
+
+    width: fit-content;
+    height: auto;
+
+    color: white;
+    font-size: 1.2vmax;
+    text-align: left;
+}
+
+.aboutBackground {
+    left: 0;
+    top: 40.872%;
+    position: relative;
+
+    width: 100%;
+    height: 66.604%;
+
+    background-color: #104051;
+    border: none;
+    border-radius: 1.316% / 16.667%;
+}
+
+.aboutSection {
+    left: 0.521%;
+    top: -3.955%;
+
+    position: relative;
+    display: grid;
+
+    width: 98.958%;
+    height: 37.429%;
+}
+
 /* General Frontpage */
 .fpTitle {
     position: absolute;
     margin: 0;
 
-    width: 15.895%;
+    width: fit-content;
     height: 21.69%;
 
     color: white;

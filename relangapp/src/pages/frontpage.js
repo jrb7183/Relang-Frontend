@@ -1,8 +1,9 @@
 import "./frontpage.css";
 import NavBar from "../components/navBar";
 import { ReactComponent as Logo} from '../logo.svg';
-const textJson = require("../text.json");
 // import React, { useState } from "react";
+
+const textJson = require("../text.json");
 
 function Feature(props) {
   return (
@@ -34,6 +35,14 @@ function Frontpage() {
             <Feature name="Consonant Analyzer" info={textJson["Features"]["Cons"]} command={placeHolder}/>
             <Feature name="Vowel Analyzer" info={textJson["Features"]["Vowel"]} command={placeHolder}/>
             <Feature name="More Coming Soon!" info={textJson["Features"]["Coming Soon"]} command={placeHolder}/>
+          </div>
+        </div>
+
+        <div className="aboutSection">
+          <h1 className="fpTitle"> About </h1>
+
+          <div className="aboutBackground">
+            <p className="aboutInfo"> {textJson["About"]["Main"]} <b> {textJson["About"]["Addendum"]} </b> </p>
           </div>
         </div>
       </div>
