@@ -1,0 +1,11 @@
+{
+    "Features": {
+        "Cons": "Enter as many consonant inventories as you like, and the Consonant Analyzer will identify commonalities between them and output a new inventory without those commonalities.",
+        "Vowel": "Enter as many vowel inventories as you like, and the Vowel Analyzer will identify commonalities between them and output a new inventory without those commonalities.",
+        "Coming Soon": "Stay tuned for more to come! Some of the new systems will include analyzers/generators for maximal syllable structures, noun and verb marking, and sentence structure."
+    },
+    "About": {
+        "Main": "This application aims to help you break free of your latent habits when approaching new conlangs. Relang Generator analyzes a variety of features from your previous protolangs to find commonalities between them. Then, it suggests an outline for a protolang that breaks away from those commonalities. This outline will allow you to go out of your conlanging comfort zone and explore linguistic phenomena that you may have avoided in the past, subconsciously or otherwise.",
+        "Addendum": "While Relang can generate many aspects of a protolang, it is first and foremost meant for inspiration."
+    }
+}

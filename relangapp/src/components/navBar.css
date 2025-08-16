@@ -1,0 +1,51 @@
+.navButton {
+    width: 10.526vmax;
+    height: 100%;
+    background-color: #104051;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border: none;
+    
+    text-align: center;
+    text-anchor: middle;
+    color: white;
+
+    font-size: calc(5px + 1vmax);
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.navButton:hover {
+    background-color: #185f79;
+}
+
+.navButton:active {
+    background-color: #0c303d;
+}
+
+.featureNav {
+    position: absolute;
+    display: flex;
+    right: 1.316%;
+
+    width: fit-content;
+    height: 100%;
+}
+
+.navBar {
+    left: 0.521%;
+    top: 0.741%;
+
+    position: relative;
+    justify-content: space-between;
+    display: flex;
+
+    width: 98.958%;
+    height: 9.259%;
+
+    background: #104051;
+    border-radius: 1.316% / 25%;
+}
