@@ -1,24 +1,20 @@
 import "./frontpage.css";
-import NavBar from "../components/navBar";
-import { ReactComponent as Logo} from '../logo.svg';
-// import React, { useState } from "react";
+import { NavLink as Link } from "react-router-dom";
 
+import NavBar from "../components/navBar";
+import { ReactComponent as Logo} from "../logo.svg";
 const textJson = require("../text.json");
 
 function Feature(props) {
   return (
-    <button type="button" className="feature" onClick={props.command}>
+    <Link className="feature" to={props.loc}>
         <h1 className="featureName"> {props.name} </h1>
         <p className="featureInfo"> {props.info} </p>
-    </button>
+    </Link>
   );
 }
 
 function Frontpage() {
-  
-  // Placeholder fŋ for actual functionality
-  const placeHolder = () => true
-
   return (
     <div className="frontpage">
       <NavBar/>
@@ -32,9 +28,9 @@ function Frontpage() {
           <h1 className="fpTitle"> Features </h1>
 
           <div className="featureGrid">
-            <Feature name="Consonant Analyzer" info={textJson["Features"]["Cons"]} command={placeHolder}/>
-            <Feature name="Vowel Analyzer" info={textJson["Features"]["Vowel"]} command={placeHolder}/>
-            <Feature name="More Coming Soon!" info={textJson["Features"]["Coming Soon"]} command={placeHolder}/>
+            <Feature name="Consonant Analyzer" info={textJson["Features"]["Cons"]} loc={"/phono"}/>
+            <Feature name="Vowel Analyzer" info={textJson["Features"]["Vowel"]} loc={"/"}/>
+            <Feature name="More Coming Soon!" info={textJson["Features"]["Coming Soon"]} loc={"/"}/>
           </div>
         </div>
 
