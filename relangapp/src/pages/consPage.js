@@ -5,6 +5,7 @@ import ConsTable from "../components/consTable"
 import requestCons from "../utils/apiCalls";
 import cleanPhono from "../utils/cleanPhonology";
 import InputTable from "../components/inputTable";
+import NavBar from "../components/navBar";
 
 function ConsPage() {
   const [outRows, setRows] = useState([]);
@@ -60,6 +61,7 @@ function ConsPage() {
 
   return (
     <div className="App">
+      <NavBar/>
       <header className="App-header">
         <button type="button" onClick={addPhono} >Add Phonology</button>
         {numPhonos > 1 ? <button type="button" onClick={removePhono} >Remove Phonology</button> : <></>}

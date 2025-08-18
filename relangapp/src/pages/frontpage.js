@@ -2,7 +2,7 @@ import "./frontpage.css";
 import { NavLink as Link } from "react-router-dom";
 
 import NavBar from "../components/navBar";
-import { ReactComponent as Logo} from "../logo.svg";
+// import { ReactComponent as Logo} from "../g74-4.svg";
 const textJson = require("../text.json");
 
 function Feature(props) {
@@ -19,11 +19,15 @@ function Frontpage() {
     <div className="frontpage">
       <NavBar/>
 
-      <div className="logoBackground">
+      {/* <div className="logoBackground">
         <Logo style={{width: "53.263%", height: "88%"}}/>
-      </div>
+      </div> */}
 
       <div className="fpBody">
+        <div className="aboutSection">
+          <p className="aboutInfo"> {textJson["About"]["Main"]} <b> {textJson["About"]["Addendum"]} </b> </p>
+        </div>
+
         <div className="featureSection">
           <h1 className="fpTitle"> Features </h1>
 
@@ -34,13 +38,6 @@ function Frontpage() {
           </div>
         </div>
 
-        <div className="aboutSection">
-          <h1 className="fpTitle"> About </h1>
-
-          <div className="aboutBackground">
-            <p className="aboutInfo"> {textJson["About"]["Main"]} <b> {textJson["About"]["Addendum"]} </b> </p>
-          </div>
-        </div>
       </div>
     </div>
   )

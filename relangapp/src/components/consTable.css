@@ -1,5 +1,6 @@
 .constable {
+    max-width: 95vw;
     border: 1px solid white;
     border-collapse: collapse;
-    padding: 8px 
+    padding: 8px
 }

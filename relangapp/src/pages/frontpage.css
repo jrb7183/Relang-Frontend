@@ -12,7 +12,7 @@
     width: 98.958%;
     height: 23.148%;
 
-    background-image: linear-gradient(#1E1E1E 74%, #848484);
+    /* background-image: linear-gradient(#1E1E1E 74%, #848484); */
     border-radius: 1.316% / 10%;
 }
 
@@ -29,15 +29,15 @@
     margin: 0;
 
     width: fit-content;
-    height: 38.5%;
+    height: 19.25%;
 
     color: white;
-    font-size: 2vmax;
+    font-size: 2rem;
 }
 
 .featureInfo {
     left: 0;
-    top: 34%;
+    top: 17%;
 
     position: absolute;
     padding: 0 3.333%;
@@ -47,7 +47,7 @@
     height: auto;
 
     color: white;
-    font-size: 1.1vmax;
+    font-size: 1.1rem;
     text-align: left;
 }
 
@@ -63,7 +63,7 @@
 
     background-color: #104051;
     border: none;
-    border-radius: 4.167% / 12.5%
+    border-radius: 4.167% / 6.25%
 }
 
 .feature:hover {
@@ -76,7 +76,7 @@
 
 .featureGrid {
     left: 0;
-    top: 28%;
+    top: 18%;
     position: relative;
 
     display: grid;
@@ -86,18 +86,18 @@
     
     
     width: 100%;
-    height: 56.338%;
+    height: 80%;
 }
 
 .featureSection {
     left: 0.521%;
-    top: 1.296%;
+    top: 1.474%;
 
     position: relative;
     display: grid;
 
     width: 98.958%;
-    height: 50.141%;
+    height: 52.632%;
 }
 
 /* About Section */
@@ -113,32 +113,21 @@
     height: auto;
 
     color: white;
-    font-size: 1.15vmax;
+    font-size: 1.1rem;
     text-align: left;
-}
-
-.aboutBackground {
-    left: 0;
-    top: 40.872%;
-    position: relative;
-
-    width: 100%;
-    height: 66.604%;
-
-    background-color: #104051;
-    border: none;
-    border-radius: 1.316% / 16.667%;
 }
 
 .aboutSection {
     left: 0.521%;
-    top: -3.955%;
-
+    top: 0;
     position: relative;
-    display: grid;
 
     width: 98.958%;
-    height: 37.429%;
+    height: 15.789%;
+
+    background-color: #104051;
+    border: none;
+    border-radius: 1.316% / 16.667%;
 }
 
 /* General Frontpage */
@@ -150,21 +139,21 @@
     height: 21.69%;
 
     color: white;
-    font-size: 3vmax;
+    font-size: 3rem;
 }
 
 .fpBody {
     left: 0;
-    top: 24.444%;
+    top: 2.037%;
     position: relative;
 
     width: 100%;
-    height: 65.556%;
+    height: 87.963%;
 }
 
 .frontpage {
-    width: 100%;
-    height: 100vh;
+    width: max(100vw, 70rem);
+    height: clamp(40rem, 100vh, 180rem);
     
     position: relative;
 

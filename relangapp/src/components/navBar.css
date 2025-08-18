@@ -1,5 +1,10 @@
+.logo {
+    width: fit-content;
+    padding: 2%
+}
+
 .navButton {
-    width: 10.526vmax;
+    width: 15rem;
     height: 100%;
     background-color: #104051;
 
@@ -13,7 +18,7 @@
     text-anchor: middle;
     color: white;
 
-    font-size: calc(5px + 1vmax);
+    font-size: 1.25rem;
     font-weight: bold;
     text-decoration: none;
 }
