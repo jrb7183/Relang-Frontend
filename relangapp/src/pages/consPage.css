@@ -1,14 +1,80 @@
-.App {
-  text-align: center;
+
+.upperButtons {
+    left: 36.579%;
+    top: 7.895%;
+    position: relative;
+
+    display: grid;
+    grid-template-columns: repeat(2, 47.17%);
+    gap: 5.66%;
+    
+    width: 27.604%;
+    height: 5.263%;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(5px + 2vmin);
-  color: white;
+.inventories {
+    left: 12.5%;
+    top: 11.316%;
+
+    position: relative;
+    display: grid;
+        
+    width: 75%;
+    height: auto;
+}
+
+.lowerButtons {
+    left: 28.906%;
+    top: 16.316%;
+    position: relative;
+
+    display: grid;
+    grid-template-columns: repeat(3, 30.864%);
+    gap: 3.704%;
+    
+    width: 42.188%;
+    height: 5.263%;
+}
+
+.cpBody {
+    left: 0;
+    top: 2.037%;
+    position: relative;
+    overflow: auto;
+
+    width: 100%;
+    height: 87.963%;
+}
+
+.consFormatting {
+    left: 0;
+    top: 20.316%;
+
+    position: relative;
+    display: flex;
+    text-align: center;
+        
+    width: 100%;
+    height: auto;
+
+    justify-content: center;
+    align-items: center;
+}
+
+.roomLeaver {
+  bottom: -20%;
+  position: relative;
+
+  height: 10%
+}
+
+.consPage {
+    width: max(100vw, 30rem);
+    height: clamp(40rem, 100vh, 180rem);
+    overflow: hidden;
+
+    position: relative;
+    
+    color: white;
+    background-color: #071419;
 }

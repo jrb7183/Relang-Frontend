@@ -1,0 +1,20 @@
+.stylishButton {
+
+    color: white;
+    background-color: #104051;
+
+    border: none;
+    border-radius: 10% / 50%;
+}
+
+.stylishButton:hover {
+    background-color: #185f79;
+}
+
+.stylishButton:active {
+    background-color: #0c303d;
+}
+
+.stylishButton:disabled {
+    background-color: #0c303d;
+}
