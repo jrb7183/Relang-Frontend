@@ -6,14 +6,14 @@ function Row(props) {
 
 function ConsTable(props) {
     return (
-        <>
-        {props.rows.length > 0 ? <h1>Here is your Consonant Inventory!</h1> : <></>}
-        <table className="constable">
-            <tbody>
-                {props.rows.map((row, i)=> <Row key={i} cells={row}/>)}
-            </tbody>
-        </table>
-        </>
+        <div>
+            {props.rows.length > 0 ? <h1 className="ctTitle" >Here is your consonant inventory!</h1> : <></>}
+            <table className="constable">
+                <tbody>
+                    {props.rows.map((row, i)=> <Row key={i} cells={row}/>)}
+                </tbody>
+            </table>
+        </div>
     );
 }
 

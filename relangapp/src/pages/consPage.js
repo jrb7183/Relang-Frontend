@@ -1,11 +1,14 @@
+import './consPage.css';
 import React, { useState } from "react";
 
-import './consPage.css';
-import ConsTable from "../components/consTable"
 import requestCons from "../utils/apiCalls";
 import cleanPhono from "../utils/cleanPhonology";
+
+import ConsTable from "../components/consTable"
 import InputTable from "../components/inputTable";
 import NavBar from "../components/navBar";
+import Button from '../components/stylishButton';
+
 
 function ConsPage() {
   const [outRows, setRows] = useState([]);
@@ -60,15 +63,31 @@ function ConsPage() {
   }
 
   return (
-    <div className="App">
+    <div className="consPage">
       <NavBar/>
-      <header className="App-header">
-        <button type="button" onClick={addPhono} >Add Phonology</button>
-        {numPhonos > 1 ? <button type="button" onClick={removePhono} >Remove Phonology</button> : <></>}
-        {Array.from({length: numPhonos}).map((_, i) => <InputTable key={i} index={i} inputs={inputs[i]} handleInputs={(event, row, column) => handleInputs(event, i, row, column)} />)}
-        <ConsTable rows={outRows} />
-        <button type="button" onClick={() => {newCons()}} style={{margin: "10px"}} >Get Consonants!</button>
-      </header>
+
+      <div className="cpBody">
+        <div className="upperButtons">
+          <Button type="button" command={addPhono} text="Add Inventory" />
+          <Button type="button" command={removePhono} disabled={numPhonos - 1 === 0} text="Remove Inventory"/>
+        </div>
+        
+        <div className='inventories'>
+          {Array.from({length: numPhonos}).map((_, i) => <InputTable key={i} index={i} inputs={inputs[i]} handleInputs={(event, row, column) => handleInputs(event, i, row, column)} />)}
+        </div>
+
+        <div className="lowerButtons">
+          <Button type="button" command={addPhono} text="Add Inventory" />
+          <Button type="button" command={removePhono} disabled={numPhonos - 1 === 0} text="Remove Inventory"/>
+          <Button type="button" command={newCons} text="Get Consonants" />
+        </div>
+
+        <div className="consFormatting">
+          <ConsTable rows={outRows} />
+        </div>
+        
+        <div className="roomLeaver" />
+      </div>
     </div>
   );
 }

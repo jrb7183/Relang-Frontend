@@ -33,15 +33,15 @@ function InputTable(props) {
     const manners = ["Nasal", "Plosive", "Affricate", "Fricative", "Sibilant", "Trill", "Tap", "Approximant"];
 
     return (
-        <>
-        <h1>Inventory {props.index + 1}</h1>
-        <table className="inputTable">
-            <tbody>
-                <Row key={0} isHeader={true} />
-                {manners.map((manner, i)=> <Row key={i + 1} isHeader={false} manner={manner} inputs={props.inputs[i]} handler={(event, column) => props.handleInputs(event, i, column)}/>)}
-            </tbody>
-        </table>
-        </>
+        <div style={{margin: "0 0 2% 0"}} >
+            <h1 className="itTitle" > Inventory {props.index + 1} </h1>
+            <table className="inputTable">
+                <tbody>
+                    <Row key={0} isHeader={true} />
+                    {manners.map((manner, i)=> <Row key={i + 1} isHeader={false} manner={manner} inputs={props.inputs[i]} handler={(event, column) => props.handleInputs(event, i, column)}/>)}
+                </tbody>
+            </table>
+        </div>
     );
 }
 

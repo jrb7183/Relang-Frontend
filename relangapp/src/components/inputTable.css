@@ -1,8 +1,11 @@
-.inputTable {
-    border: 1px solid white;
-    border-collapse: collapse;
-    padding: 8px; 
-    width: 50%;
+.itTitle {
+    position: relative;
+    margin: 0;
+
+    width: fit-content;
+    height: 12%;
+
+    color: white;
 }
 
 .consCell {
@@ -12,5 +15,11 @@
 
     background-color: transparent;
     color: white;
-    font-size: calc(5px + 1.5vmin);
+}
+
+.inputTable {
+    border: 1px solid white;
+    border-collapse: collapse;
+    padding: 8px; 
+
 }

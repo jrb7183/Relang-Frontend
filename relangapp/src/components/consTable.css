@@ -1,3 +1,21 @@
+.ctTitle {
+    position: relative;
+    margin: 1% 0;
+    width: auto;
+
+    color: white;
+}
+
+.consCell {
+    border: none;
+    box-sizing: border-box;
+    width: 100%;
+
+    background-color: transparent;
+    color: white;
+    font-size: 1.1rem;
+}
+
 .constable {
     max-width: 95vw;
     border: 1px solid white;
